@@ -8,19 +8,18 @@ export default function ListFrete() {
 
         
     return(
-        <div>            
-            <div className='p-2'>
-                {allFretes && allFretes.length == 0 ?<>
-                    <h3 className='mb-5'>Não exite corridas em andamento!</h3>
-                    <Link href="/"><a>
-                        <button className="bg-slate-800 hover:bg-slate-500 w-full
-                            text-white px-4 py-4 mt-7" >Adicionar frete
-                        </button>
-                    </a></Link> 
-                    </>
-                    :
-                    <h4>Corridas em andamentos:</h4>      
-                }
+        <div>             
+            {allFretes && allFretes.length == 0 ?<>
+                <h3 className='mb-5'>Não exite corridas em andamento!</h3>
+                <Link href="/"><a>
+                    <button className="bg-slate-800 hover:bg-slate-500 w-full
+                        text-white px-4 py-4 mt-7" >Adicionar frete
+                    </button>
+                </a></Link> 
+                </>
+                :
+                <h4>Corridas em andamentos:</h4>      
+            }
             {allFretes && allFretes.map((f,key)=>(<>
                 {f.status != 'finalizado' &&
                 <div key={key} className="px-8 py-4 mx-auto bg-white rounded-lg shadow-md dark:bg-gray-800 mt-5">
@@ -100,7 +99,6 @@ export default function ListFrete() {
                        </div> 
                 </div>}</>
             ))}
-            </div>           
-        </div>
+        </div> 
     )
 }

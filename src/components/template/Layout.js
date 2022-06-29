@@ -16,8 +16,8 @@ export default function Layout(props) {
                 <Navbar />
                 <hr/>
                 <div className={`
-                    flex flex-col mt-7
-                    dark:text-gray-200 p-5
+                    flex flex-col mt-3
+                    dark:text-gray-200 p-1
                 `}>
                     {props.children}
                 </div>
